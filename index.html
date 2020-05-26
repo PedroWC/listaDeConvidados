@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Convidados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text-center mt-5">Lista de Convidados</h1>
+
+    <form class="col col-4 offset-4 mt-5">
+        <div class="form-group row">
+            <div class="col-sm">
+                <input type="text" class="form-control" id="nome" placeholder="Nome">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm">
+                <input type="number" class="form-control" id="idade" placeholder="Idade">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm">
+                <input type="email" class="form-control" id="email" placeholder="E-mail">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="adicionar()">Inserir</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="limparCampos()">Cancelar</button>
+    </form>
+
+    <table class="table text-center table-hover mt-5 col col-8 offset-2">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Idade</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Opções</th>
+            </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
